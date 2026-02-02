@@ -1,4 +1,4 @@
-const API_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+const API_URL = "https://script.google.com/macros/s/AKfycbwNEXOb0NjgZeork1u_hmWK7gZsyAYtRb1iPbn-YW6HZaaJh_SbjHUMwfTkf_QIeH5rxw/exec";
 
 // CONFIGURAÇÃO DOS CAMPOS
 const CAMPOS = {
