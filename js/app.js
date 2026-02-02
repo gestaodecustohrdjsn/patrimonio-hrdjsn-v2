@@ -2,15 +2,31 @@ const API_URL = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
 
 // CONFIGURAÇÃO DOS CAMPOS
 const CAMPOS = {
-  DESCRICAO: { label: "Descrição", mostrar: true, largura: "full" },
-  CENTRO_CUSTO: { label: "Centro de Custo", mostrar: true },
-  AMBIENTE: { label: "Ambiente", mostrar: true },
-  MARCA: { label: "Marca", mostrar: false },
-  MODELO: { label: "Modelo", mostrar: false },
-  CLASSIFICACAO: { label: "Classificação", mostrar: true },
-  DATA_AQUISICAO: { label: "Data de Aquisição", mostrar: true, tipo: "data" },
-  VALOR_MATERIAL: { label: "Valor Estimado", mostrar: false, tipo: "moeda" }
+  DESCRICAO: {
+    label: "Descrição",
+    mostrar: true,
+    largura: "full"
+  },
+  CLASSIFICACAO: {
+    label: "Grupo",
+    mostrar: true
+  },
+  CENTRO_CUSTO: {
+    label: "Centro de Custo",
+    mostrar: true
+  },
+  VALOR_MATERIAL: {
+    label: "Valor do Material",
+    mostrar: true,
+    tipo: "moeda"
+  },
+  DATA_AQUISICAO: {
+    label: "Data de Aquisição",
+    mostrar: true,
+    tipo: "data"
+  }
 };
+
 
 function getParam(name) {
   return new URLSearchParams(window.location.search).get(name);
