@@ -45,9 +45,20 @@ if (!id) {
 
 function montarTela(dados) {
   if (dados.erro) {
-    alert(dados.erro);
-    return;
-  }
+  document.body.innerHTML = `
+    <div style="
+      font-family: Segoe UI, sans-serif;
+      color: #666;
+      text-align: center;
+      margin-top: 40vh;
+      font-size: 1.2em;
+    ">
+      Patrimônio não encontrado
+    </div>
+  `;
+  return;
+}
+
 
   document.title = `Patrimônio ${dados.ID_INTERNA}`;
   document.getElementById("id-tag").innerText = `ID: ${dados.ID_INTERNA}`;
