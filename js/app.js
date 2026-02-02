@@ -98,8 +98,14 @@ function montarFoto(nomeFoto) {
     return;
   }
 
-  document.getElementById("foto").src = `fotos/${nomeFoto}`;
+  const img = document.getElementById("foto");
+  img.src = `fotos/${nomeFoto}`;
+
+  img.onerror = () => {
+    document.getElementById("foto-container").style.display = "none";
+  };
 }
+
 
 
 function formatar(valor, tipo) {
