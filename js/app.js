@@ -38,27 +38,20 @@ if (!id) {
   alert("ID do patrimônio não informado na URL.");
 } else {
   fetch(`${API_URL}?id=${id}`)
-    .then(res => res.json())
-    .then(dados => montarTela(dados))
-    .catch(() => alert("Erro ao carregar patrimônio"));
+  .then(res => res.json())
+  .then(dados => montarTela(dados))
+  .catch(() => mostrarErro());
 }
 
 function montarTela(dados) {
-  if (dados.erro) {
-  document.body.innerHTML = `
-    <div style="
-      font-family: Segoe UI, sans-serif;
-      color: #666;
-      text-align: center;
-      margin-top: 40vh;
-      font-size: 1.2em;
-    ">
-      Patrimônio não encontrado
-    </div>
-  `;
-  return;
-}
+  document.getElementById("loading").style.display = "none";
 
+  if (dados.erro) {
+    mostrarErro();
+    return;
+  }
+
+  document.getElementById("card").style.display = "block";
 
   document.title = `Patrimônio ${dados.ID_INTERNA}`;
   document.getElementById("id-tag").innerText = `ID: ${dados.ID_INTERNA}`;
@@ -66,6 +59,7 @@ function montarTela(dados) {
   montarCampos(dados);
   montarFoto(dados.FOTO);
 }
+
 
 function montarCampos(dados) {
   const container = document.getElementById("info-group");
@@ -125,3 +119,6 @@ function formatar(valor, tipo) {
   return valor;
 }
 
+function mostrarErro() {
+  document.getElementById("loading").innerText = "Patrimônio não encontrado";
+}
