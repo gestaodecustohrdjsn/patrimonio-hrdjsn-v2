@@ -90,6 +90,7 @@ function montarFoto(nomeFoto) {
   document.getElementById("foto").src = `fotos/${nomeFoto}`;
 }
 
+
 function formatar(valor, tipo) {
   if (!tipo) return valor;
 
