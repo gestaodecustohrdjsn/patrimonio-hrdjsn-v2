@@ -1,4 +1,5 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbwNEXOb0NjgZeork1u_hmWK7gZsyAYtRb1iPbn-YW6HZaaJh_SbjHUMwfTkf_QIeH5rxw/exec";
+// const API_URL = "https://script.google.com/macros/s/AKfycbwNEXOb0NjgZeork1u_hmWK7gZsyAYtRb1iPbn-YW6HZaaJh_SbjHUMwfTkf_QIeH5rxw/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycby8kR_7h0GiR8AsF3ugh3ivphC-CjgmwpUwZ9FtEzixejlfu_SWWyDbSi2t6kJbl3cE/exec";
 
 // CONFIGURAÇÃO DOS CAMPOS
 const CAMPOS = {
